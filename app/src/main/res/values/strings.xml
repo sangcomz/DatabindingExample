@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">DatabindingExample</string>
+
+    <string name="msg_hello_data_binding">Hello DataBinding!</string>
+
+    <string name="msg_format_hello_data_binding">%s, Hello DataBinding!</string>
+
+    <string name="everybody">Everybody</string>
+
+    <string name="msg_good">Goooood</string>
+    <string name="msg_bad">Wooooooooo</string>
+</resources>

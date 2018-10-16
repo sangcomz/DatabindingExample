@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="isHelpful"
+            type="Boolean" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/tv_sample_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:gravity="center"
+            android:text="@{`It is hard-coded.`}"
+            app:layout_constraintBottom_toTopOf="@+id/tv_sample_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_sample_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@{@string/msg_hello_data_binding}"
+            app:layout_constraintBottom_toTopOf="@+id/tv_sample_3"
+            app:layout_constraintEnd_toEndOf="@+id/tv_sample_1"
+            app:layout_constraintStart_toStartOf="@+id/tv_sample_1"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sample_1" />
+
+        <TextView
+            android:id="@+id/tv_sample_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@{@string/msg_format_hello_data_binding(`Seokwon`)}"
+            app:layout_constraintBottom_toTopOf="@+id/tv_sample_4"
+            app:layout_constraintEnd_toEndOf="@+id/tv_sample_2"
+            app:layout_constraintStart_toStartOf="@+id/tv_sample_2"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sample_2" />
+
+        <TextView
+            android:id="@+id/tv_sample_4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@{@string/msg_format_hello_data_binding(@string/everybody)}"
+            app:layout_constraintBottom_toTopOf="@+id/tv_sample_5"
+            app:layout_constraintEnd_toEndOf="@+id/tv_sample_3"
+            app:layout_constraintStart_toStartOf="@+id/tv_sample_3"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sample_3" />
+
+        <TextView
+            android:id="@+id/tv_sample_5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@{@string/msg_format_hello_data_binding(isHelpful ? `Gooood` : `Woo`)}"
+            app:layout_constraintBottom_toTopOf="@+id/tv_sample_6"
+            app:layout_constraintEnd_toEndOf="@+id/tv_sample_4"
+            app:layout_constraintStart_toStartOf="@+id/tv_sample_4"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sample_4" />
+
+        <TextView
+            android:id="@+id/tv_sample_6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@{@string/msg_format_hello_data_binding(isHelpful ? @string/msg_good : @string/msg_bad)}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tv_sample_5"
+            app:layout_constraintStart_toStartOf="@+id/tv_sample_5"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sample_5" />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>
+
